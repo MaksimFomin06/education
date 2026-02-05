@@ -34,3 +34,34 @@ const UserName = "Павел"; // Pascal case
 // typeof не использовать, устарел
 const data = 1;
 console.log(typeof data); // number
+
+// Тип number
+const million = 1_000_000;
+const million2 = 1e6;
+const million3 = 1e-6; // 0.000001
+const million4 = 1e-7; // 1e-7 Так как в JS болште числа так сокращаются
+
+// infinity
+const num3 = 1e1000; // infinity
+
+// Проверка что число конечное
+console.log(Number.isFinite(num3));
+
+// NaN
+const num4 = 50 / "hello";
+console.log(num4); // NaN
+
+// Числа в строку
+const num5 = 52;
+console.log(num.toString()); // "52"
+console.log(num.toString(2)); // 110100 двоичная система счисления
+console.log(num + ""); // "52"
+
+// Строки в числа
+const str2 = "52.86";
+console.log(+str); // 52.86
+console.log(Number(str)); // 52.86
+console.log(Number.parseInt(str)); // 52
+const num6 = "54.2ru4b";
+console.log(Number.parseInt(num6)); // 54
+console.log(Number.parseFloat(num6)); // 54.2
