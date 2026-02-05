@@ -65,3 +65,19 @@ console.log(Number.parseInt(str)); // 52
 const num6 = "54.2ru4b";
 console.log(Number.parseInt(num6)); // 54
 console.log(Number.parseFloat(num6)); // 54.2
+
+// Округление
+console.log(Math.round(24.43)); // 24
+console.log(Math.round(24.88)); // 25
+console.log(Math.floor(24.88)); // 24
+console.log(Math.ceil(24.43)); // 25
+console.log(Math.trunc(24.43)); // 24 - Просто отбрасывает дробную часть
+console.log(Math.trunc(24.4367 * 100) / 100); // 24.44
+
+// Max min
+console.log(Math.max(2, 5, -4, 0));
+console.log(Math.min(2, 5, -4, 0));
+
+// Random
+console.log(Math.random()); // Случайное число от нуля до единицы, ничего не принимает на вход
+console.log(Math.floor(Math.random() * (max - min + 1) + min)); // Рандомное число в диапазоне от min до max включительно
