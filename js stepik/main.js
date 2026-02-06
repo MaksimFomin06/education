@@ -91,3 +91,12 @@ const str3 = `
 2
 3
 `;
+console.log(String(num));
+console.log(String(true)); // "true"
+console.log(Number(num));
+console.log(str.length(str3)); // Длина строки
+console.log(str3[0]); // 1
+console.log(str3.at(0));
+console.log(str.at(-1));
+console.log(str.toLocaleLowerCase(str3)); // В нижний регистр
+console.log(str.trim(str3)); // Очищает проблемы по краям
