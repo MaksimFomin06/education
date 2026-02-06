@@ -81,3 +81,13 @@ console.log(Math.min(2, 5, -4, 0));
 // Random
 console.log(Math.random()); // Случайное число от нуля до единицы, ничего не принимает на вход
 console.log(Math.floor(Math.random() * (max - min + 1) + min)); // Рандомное число в диапазоне от min до max включительно
+
+// Строки
+console.log("У меня есть " + count + " яблок");
+console.log("У меня есть " + count + " яблок");
+console.log(`У меня есть ${count} яблок`);
+const str3 = `
+1
+2
+3
+`;
