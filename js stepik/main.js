@@ -106,3 +106,38 @@ console.log(str.trim(str3)); // Очищает проблемы по краям
 // Тернарный операто - 3 операнда
 
 // Математические операторы + - * / ** %
+// Также работают += -= .= и тд
+
+const test_num1 = 5;
+const prefix = ++test_num1;
+console.log("num1", test_num1); // 6
+console.log("prefix", prefix); // 6
+
+const test_num2 = 5;
+const prefix2 = test_num2++;
+console.log("num1", test_num1); // 6
+console.log("prefix", prefix); //  5
+
+// Операторы сравнения > < >= <= == === != !==
+// == нестрогое сравнение (игнор типов данных)
+// === строгове сравнение
+console.log(0 === -0); // true
+console.log(Object.is(0, -0)); // false
+
+console.log(NaN === NaN); // false
+console.log(Object.is(NaN, NaN)); // true
+
+// Логические операторы
+// && и
+// || или
+
+console.log(`Привет, ${user || "anonim"}`);
+
+const messagesCount = 0;
+console.log(
+  `Количество непрочитаных сообщений ${messagesCount || "неизвестно"}`,
+); // неизвестно !!! - неправильно
+
+console.log(
+  `Количество непрочитаных сообщений ${messagesCount ?? "неизвестно"}`,
+); // 0 - правильно
