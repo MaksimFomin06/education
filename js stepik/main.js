@@ -99,7 +99,7 @@ console.log(str3[0]); // 1
 console.log(str3.at(0));
 console.log(str.at(-1));
 console.log(str.toLocaleLowerCase(str3)); // В нижний регистр
-console.log(str.trim(str3)); // Очищает проблемы по краям
+console.log(str.trim(str3)); // Очищает пробелы по краям
 
 // Унарный оператор - 1 операнд (typeof num)
 // Бинарный оператор - 2 операнда (5 - 20)
@@ -141,3 +141,20 @@ console.log(
 console.log(
   `Количество непрочитаных сообщений ${messagesCount ?? "неизвестно"}`,
 ); // 0 - правильно
+
+// Побитовые операторы
+// Сдвиг битов влево эквивалентен умножению на степень двойки
+5 << 2; // 20
+// Сдвиг битов вправо эквивалентен деление
+20 >> 5; // 5
+20 >>> 5; // 5
+
+// if else
+// Синтаксис
+if (pass) {
+  return;
+} else if (pass) {
+  return;
+} else {
+  return;
+}
