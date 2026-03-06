@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+.business-card {
+  width: 350px;
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+.name {
+  color: blue;
+  margin-bottom: 0;
+}
+
+.title {
+  color: gray;
+  margin-top: 5px;
+}
