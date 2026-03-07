@@ -1,0 +1,67 @@
+h1 {
+  font-size: 48px;
+}
+
+.important-notice {
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+}
+
+p {
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(60, 60, 150);
+}
+
+.quote {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+.article-text {
+  text-align: justify;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 28px;
+  color: darkslateblue;
+}
+
+p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.quote-block {
+  font-family: "Times New Roman", serif;
+}
+
+.quote-block p {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.quote-block .author {
+  text-align: right;
+  color: gray;
+}
