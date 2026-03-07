@@ -1,0 +1,74 @@
+p {
+  color: darkblue;
+  font-style: italic;
+}
+
+.warning {
+  background-color: lightyellow;
+  border: 1px solid orange;
+}
+
+#main-title {
+  font-size: 32px;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer a {
+  color: gray;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, serif;
+}
+
+p.necessary {
+  font-weight: bold;
+  border-left: 4px solid red;
+}
+
+button {
+  background-color: lightgray;
+}
+
+button:hover {
+  background-color: darkgray;
+  cursor: pointer;
+}
+
+#page-title {
+  color: purple;
+}
+
+.note {
+  color: green;
+  font-weight: bold;
+}
+
+h1 {
+  color: orange !important;
+}
+
+.product-card h2 {
+  color: #333;
+}
+
+.product-card p {
+  color: #666;
+}
+
+.price {
+  color: green;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: darkblue;
+}
