@@ -1,0 +1,98 @@
+.fixed-box {
+  width: 300px;
+  height: 150px;
+  background-color: lightblue;
+}
+
+.flexible-box {
+  width: 50%;
+  background-color: lightgreen;
+  color: white;
+  text-align: center;
+}
+
+.hero {
+  height: 100vh;
+  background-color: darkgray;
+}
+
+.note {
+  border: 2px dashed tomato;
+}
+
+button {
+  background-color: skyblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+
+.content-block {
+  background-color: lightgray;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.menu-button a {
+  display: inline-block;
+  background-color: teal;
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  margin-right: 10px;
+}
+
+.interactive-box {
+  background-color: whitesmoke;
+  padding: 20px;
+  border: 2px solid transparent;
+}
+
+.interactive-box:hover {
+  border-color: dodgerblue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.profile-card {
+  width: 300px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.profile-card img {
+  max-width: 100%;
+}
+
+.profile-info {
+  padding: 15px;
+}
+
+h2 {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+p {
+  color: gray;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid lightgray;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: dodgerblue;
+}
