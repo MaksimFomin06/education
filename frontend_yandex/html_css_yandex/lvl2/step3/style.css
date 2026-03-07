@@ -1,0 +1,37 @@
+h1 {
+  color: green;
+}
+
+.alert {
+  background-color: #ffdddd;
+}
+
+button {
+  background-color: rgb(0, 123, 255);
+  color: rgb(255, 255, 255);
+}
+
+.text-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+}
+
+.ghost-block {
+  opacity: 0.5;
+}
+
+body {
+  background-image: url(https://media.istockphoto.com/id/497315278/photo/two-friendly-cats.jpg?s=612x612&w=0&k=20&c=n7Fnn9SBZNEJPKItgAtlyl-uGZxQ1enkHXMrvQ_KNNQ=);
+}
+
+body {
+  background-image: url(https://icdn.lenta.ru/images/2025/05/13/18/20250513184900219/square_1280_6bab20e6f097e07a2b1b410b55cdc4a8.jpg);
+  background-repeat: no-repeat;
+}
+
+body {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtk4C5wdl8S1ogO3KDaC1DecN6byr3ENFPeA&s);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
