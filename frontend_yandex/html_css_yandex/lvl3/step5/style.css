@@ -1,0 +1,14 @@
+.search-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: royalblue;
+  color: white;
+}
+
+.search-button .material-icons {
+  font-size: 20px;
+}
