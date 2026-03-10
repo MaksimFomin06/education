@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Простая сетка</title>
+    <style>
+      .grid-container {
+        border: 2px solid #333;
+        height: 300px;
+      }
+      .grid-item {
+        background-color: lightsalmon;
+        border: 1px solid tomato;
+        text-align: center;
+      }
+    </style>
+  <link rel="stylesheet" href="style.css">
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сетка с repeat</title>
+    <style>
+        .photo-grid {
+            border: 2px solid #ccc;
+            padding: 10px;
+        }
+        .photo-item {
+            background-color: lightgoldenrodyellow;
+            padding: 15px;
+            border: 1px solid goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div class="photo-grid">
+        <div class="photo-item">1</div>
+        <div class="photo-item">2</div>
+        <div class="photo-item">3</div>
+        <div class="photo-item">4</div>
+        <div class="photo-item">5</div>
+        <div class="photo-item">6</div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фиксированная панель</title>
+    <style>
+        .layout {
+            border: 2px solid #333;
+            height: 200px;
+        }
+        .sidebar {
+            background-color: lightgray;
+            padding: 20px;
+        }
+        .main-content {
+            background-color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="sidebar">Меню (250px)</div>
+        <div class="main-content">Основной контент (гибкий)</div>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отступы с gap</title>
+    <style>
+        .grid-container {
+            border: 2px solid #ccc;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: lightseagreen;
+            padding: 15px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Центрирование в ячейках</title>
+    <style>
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 100px);
+            border: 2px solid #ccc;
+        }
+        .icon {
+            border: 1px solid tomato;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon-grid">
+        <div class="icon">★</div>
+        <div class="icon">❤</div>
+        <div class="icon">✔</div>
+        <div class="icon">⚑</div>
+        <div class="icon">⚙</div>
+        <div class="icon">⚓</div>
+    </div>
+</body>
+</html>
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Выравнивание к краю</title>
+    <style>
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 150px; /* Задаем фиксированную высоту строке */
+            gap: 10px;
+        }
+        .card {
+            background-color: #f0f8ff;
+            border: 1px solid #add8e6;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-grid">
+        <div class="card">Текст внизу</div>
+        <div class="card">И этот текст</div>
+        <div class="card">Тоже внизу</div>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Индивидуальное выравнивание</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            justify-items: center; /* Все элементы по центру */
+            align-items: center;
+            height: 100px;
+            border: 1px solid #ccc;
+        }
+        .item {
+            background-color: lightcyan;
+            padding: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid">
+        <div class="item">Центр</div>
+        <div class="item stretch-me">Растяни меня</div>
+        <div class="item">Центр</div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Растянутый заголовок</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .grid-item {
+            background-color: lightskyblue;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            background-color: steelblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item header">Заголовок</div>
+        <div class="grid-item">Блок 1</div>
+        <div class="grid-item">Блок 2</div>
+        <div class="grid-item">Блок 3</div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Areas</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+        .grid-container {
+            height: 100%;
+        }
+        .grid-item {
+            padding: 20px;
+            border: 1px solid #333;
+        }
+        .header { background-color: lightcoral; }
+        .nav { background-color: lightblue; }
+        .main { background-color: lightyellow; }
+        .footer { background-color: lightgreen; }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="grid-item header">Шапка</header>
+        <nav class="grid-item nav">Навигация</nav>
+        <main class="grid-item main">Основной контент</main>
+        <footer class="grid-item footer">Подвал</footer>
+    </div>
+</body>
+</html>
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Новостной сайт</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        font-family: sans-serif;
+      }
+      .grid-item {
+        padding: 1em;
+        border: 1px solid #ccc;
+      }
+      .header {
+        background-color: #f8f9fa;
+      }
+      .nav {
+        background-color: #e9ecef;
+      }
+      .main-news {
+        background-color: #fff;
+      }
+      .sidebar {
+        background-color: #f1f3f5;
+      }
+      .footer {
+        background-color: #343a40;
+        color: white;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-grid">
+      <header class="grid-item header">Шапка сайта</header>
+      <nav class="grid-item nav">Меню</nav>
+      <main class="grid-item main-news">Основная лента новостей</main>
+      <aside class="grid-item sidebar">Боковая панель</aside>
+      <footer class="grid-item footer">Подвал</footer>
+    </div>
+  </body>
+</html>
