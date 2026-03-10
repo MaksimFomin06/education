@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+}
+
+.vertical-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-panel {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info {
+  flex-grow: 1;
+}

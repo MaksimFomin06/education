@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Элементы в ряд</title>
+    <style>
+      .container {
+        border: 2px solid #ccc;
+        padding: 10px;
+      }
+      .item {
+        background-color: lightblue;
+        padding: 20px;
+        border: 1px solid blue;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Элемент 1</div>
+      <div class="item">Элемент 2</div>
+      <div class="item">Элемент 3</div>
+    </div>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Вертикальное меню</title>
+    <style>
+      .vertical-menu {
+        border: 2px solid #ccc;
+        width: 200px; /* Ограничиваем ширину контейнера */
+      }
+      .menu-item {
+        background-color: lightsteelblue;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid blue;
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="vertical-menu">
+      <a href="#" class="menu-item">Главная</a>
+      <a href="#" class="menu-item">Профиль</a>
+      <a href="#" class="menu-item">Настройки</a>
+    </nav>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Центрирование</title>
+    <style>
+      .container {
+        border: 2px solid #ccc;
+        height: 300px; /* Задаем высоту для демонстрации вертикального центрирования */
+      }
+      .item {
+        background-color: lightcoral;
+        padding: 20px;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Центр</div>
+    </div>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Распределение пространства</title>
+    <style>
+      .header {
+        border: 2px solid #ccc;
+        padding: 10px;
+      }
+      .logo,
+      .navigation,
+      .login-button {
+        padding: 10px;
+        border: 1px solid blue;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Логотип</div>
+      <div class="navigation">Навигация</div>
+      <div class="login-button">Войти</div>
+    </header>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Отступы между элементами</title>
+    <style>
+      .button-panel {
+        border: 2px solid #ccc;
+        padding: 10px;
+      }
+      .button {
+        padding: 8px 16px;
+        background-color: darkseagreen;
+        color: white;
+        border: none;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="button-panel">
+      <button class="button">ОК</button>
+      <button class="button">Отмена</button>
+      <button class="button">Применить</button>
+    </div>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Перенос строк</title>
+    <style>
+      .gallery {
+        border: 2px solid #ccc;
+        padding: 10px;
+      }
+      .photo {
+        width: 150px; /* Фиксированная ширина для каждого фото */
+        height: 100px;
+        background-color: lightpink;
+        border: 1px solid deeppink;
+        text-align: center;
+        line-height: 100px; /* Вертикальное центрирование текста */
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="photo">Фото 1</div>
+      <div class="photo">Фото 2</div>
+      <div class="photo">Фото 3</div>
+      <div class="photo">Фото 4</div>
+      <div class="photo">Фото 5</div>
+    </div>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Шапка сайта</title>
+    <style>
+      .site-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+        padding: 10px 20px;
+      }
+      .logo {
+        font-weight: bold;
+        font-size: 24px;
+      }
+      .main-nav a {
+        text-decoration: none;
+        color: #333;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">MySite</div>
+      <nav class="main-nav">
+        <a href="#">Главная</a>
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+      </nav>
+    </header>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Карточка товара</title>
+    <style>
+      .product-card {
+        width: 250px;
+        height: 350px; /* Фиксированная высота карточки */
+        border: 1px solid #ccc;
+        padding: 15px;
+      }
+      .product-info {
+        /* Этот блок должен растянуться, чтобы занять все доступное место */
+      }
+      .buy-button {
+        background-color: dodgerblue;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+      }
+    </style>
+    <!-- Сюда тестирующая система подключит ваш CSS-код -->
+  </head>
+  <body>
+    <div class="product-card">
+      <div class="product-info">
+        <h3>Чудо-пылесос</h3>
+        <p>Очень мощный и тихий.</p>
+      </div>
+      <a href="#" class="buy-button">Купить</a>
+    </div>
+  </body>
+</html>
