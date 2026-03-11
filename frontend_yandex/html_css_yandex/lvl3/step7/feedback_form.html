@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма обратной связи</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Ваши личные данные</legend>
+        <label for="name-field">Имя:</label>
+        <input type="text" name="user_name" id="name-field" />
+        <label for="email-field">Email:</label>
+        <input
+          type="email"
+          name="user_email"
+          id="email-field"
+          placeholder="Введите вашу почту"
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Тема обращения</legend>
+        <p>
+          <label for="sug">Предложение</label>
+          <input
+            type="radio"
+            name="topic"
+            id="sug"
+            value="suggestion"
+            checked
+          />
+        </p>
+        <p>
+          <label for="com">Жалоба</label>
+          <input type="radio" name="topic" id="com" value="complaint" />
+        </p>
+        <p>
+          <label for="pra">Благодарность</label>
+          <input type="radio" name="topic" id="pra" value="praise" />
+        </p>
+      </fieldset>
+      <label for="area_message">Сообщение</label>
+      <textarea name="message" id="area_message"></textarea>
+      <label for="sublet">Подписаться на рассылку</label>
+      <input type="checkbox" id="sublet" checked name="subscribe" value="yes" />
+      <label for="depart">В какой отдел:</label>
+      <select name="department" id="depart">
+        <option value="support">Служба поддержки</option>
+        <option value="sales" selected>Отдел продаж</option>
+        <option value="management">Руководство</option>
+      </select>
+      <button type="submit">Отправить</button>
+      <button type="reset">Очистить</button>
+    </form>
+  </body>
+</html>
