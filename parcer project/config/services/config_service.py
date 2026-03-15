@@ -1,8 +1,8 @@
-from models import Config
-from storage.json_storage import JSONStorage
-from validators.url import URLValidator
-from validators.selectors import SelectorsValidator
-from validators.requirements import RequirementsValidator
+from config.models import Config
+from config.storage.json_storage import JSONStorage
+from config.validators.url import URLValidator
+from config.validators.selectors import SelectorsValidator
+from config.validators.requirements import RequirementsValidator
  
 
 class ConfigService:

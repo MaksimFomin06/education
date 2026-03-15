@@ -1,6 +1,6 @@
 from dataclasses import asdict
 import json
-from models import Config
+from config.models import Config
 
 
 class JSONStorage:
