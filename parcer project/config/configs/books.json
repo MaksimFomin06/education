@@ -1,0 +1,14 @@
+{
+    "url": "http://books.toscrape.com/catalogue/category/books/music_14/index.html",
+    "selectors": {
+        "title": "h3 a",
+        "price": ".price_color"
+    },
+    "requirements": [
+        {
+            "field": "price",
+            "operator": "lt",
+            "value": "60"
+        }
+    ]
+}
