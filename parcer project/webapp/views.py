@@ -1,4 +1,5 @@
 import json
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.utils.text import get_valid_filename
@@ -7,6 +8,7 @@ import re
 
 from config.services.config_service import ConfigService
 from config.storage.json_storage import JSONStorage
+from webapp.services.parser import Parser
 
 def get_config_form(request):
     if request.method == "POST":
@@ -32,7 +34,8 @@ def get_config_form(request):
         )
         service.save_config(config, filename)
             
+        parsed_data = Parser.parse(filename)
         messages.success(request, f"Конфигурация сохранена: {filename}")
-        return redirect('get-config-form')
+        return render(request, 'webapp/create_config.html', {'parsed_data': parsed_data})
 
     return render(request, 'webapp/create_config.html')

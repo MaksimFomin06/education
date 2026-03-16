@@ -68,4 +68,11 @@
 
   <script src="{% static 'js/add_selector.js' %}"></script>
   <script src="{% static 'js/add_requirement.js' %}"></script>
+
+  {% if parsed_data %}
+    <hr />
+    <h3>Результаты парсинга:</h3>
+    <p>Найдено записей: {{ parsed_data|length }}</p>
+    <pre style="background: #f5f5f5; padding: 10px; overflow-x: auto;">{{ parsed_data|pprint }}</pre>
+  {% endif %}
 {% endblock %}
