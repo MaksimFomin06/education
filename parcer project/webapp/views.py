@@ -1,14 +1,13 @@
-import json
-from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.utils.text import get_valid_filename
-from django.core.exceptions import ValidationError
-import re
-
 from config.services.config_service import ConfigService
 from config.storage.json_storage import JSONStorage
 from webapp.services.parser import Parser
+
+
+def index(request):
+    return redirect("get-config-form")
+
 
 def get_config_form(request):
     if request.method == "POST":
