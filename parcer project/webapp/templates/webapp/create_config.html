@@ -1,87 +1,71 @@
-{% load static %} {% if messages %} {% for message in messages %}
-<div class="alert alert-{{ message.tags }}">{{ message }}</div>
-{% endfor %} {% endif %}
+{% extends 'webapp/base.html' %}
+{% load static %}
 
-<form id="configForm" method="post">
-  {% csrf_token %}
-  <fieldset>
-    <legend>Форма данных для конфига</legend>
-    <p>
-      <label for="url-input-config">Введите url</label>
-      <input
-        type="url"
-        id="url-input-config"
-        name="url"
-        placeholder="https://example.com"
-        required
-      />
-    </p>
-    <p>
-      <label for="filename-input-config"
-        >Введите название файла для сохранения</label
-      >
-      <input
-        type="text"
-        name="filename"
-        id="filename-input-config"
-        placeholder="example.json"
-      />
-    </p>
-    <fieldset>
-      <legend>Список селекторов</legend>
-      <div class="selector-container">
-        <div class="selector-row">
-          <p>
-            <label for="selector-field">Введите поле</label>
-            <input type="text" name="selector-field-name" id="selector-field" />
-          </p>
-          <p>
-            <label for="selector-css">Введите селектор</label>
-            <input type="text" name="selector-css-name" id="selector-css" />
-          </p>
-        </div>
-      </div>
-      <button type="button" onclick="addSelector()">Добавить селектор</button>
-    </fieldset>
-    <fieldset>
-      <legend>Требования</legend>
-      <div class="requirements-container">
-        <div class="requirements-row">
-          <p>
-            <label for="req-field">Поле</label
-            ><input
-              type="text"
-              name="req-field-name"
-              id="req-field"
-              placeholder="Поле"
-              required
-            />
-          </p>
-          <select name="req-operator">
-            <option value="gt">></option>
-            <option value="lt"><</option>
-            <option value="eq">=</option>
-          </select>
-          <p>
-            <label for="req-value">Значение</label
-            ><input
-              type="text"
-              name="req-value-name"
-              id="req-value"
-              placeholder="Значение"
-              required
-            />
-          </p>
-        </div>
-      </div>
-      <button type="button" onclick="addRequirement()">
-        Добавить требование
-      </button>
-    </fieldset>
-  </fieldset>
-  <button type="submit">Отправить</button>
-  <button type="reset">Очистить</button>
-</form>
+{% block content %}
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
 
-<script src="{% static 'js/add_selector.js' %}"></script>
-<script src="{% static 'js/add_requirement.js' %}"></script>
+  <form id="configForm" method="post">
+    {% csrf_token %}
+    <fieldset>
+      <legend>Форма данных для конфига</legend>
+      <p>
+        <label for="url-input-config">Введите url</label>
+        <input type="url" id="url-input-config" name="url" placeholder="https://example.com" required />
+      </p>
+      <p>
+        <label for="filename-input-config">Введите название файла для сохранения</label>
+        <input type="text" name="filename" id="filename-input-config" placeholder="example.json" />
+      </p>
+
+      <fieldset>
+        <legend>Список селекторов</legend>
+        <div class="selector-container" id="selector-container">
+          <div class="selector-row">
+            <p>
+              <label>Введите поле</label>
+              <input type="text" name="selector-field-name" />
+            </p>
+            <p>
+              <label>Введите селектор</label>
+              <input type="text" name="selector-css-name" />
+            </p>
+          </div>
+        </div>
+        <button type="button" onclick="addSelector()">Добавить селектор</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Требования</legend>
+        <div class="requirements-container">
+          <div class="requirements-row">
+            <p>
+              <label>Поле</label>
+              <input type="text" name="req-field-name" placeholder="Поле" required />
+            </p>
+            <select name="req-operator">
+              <option value="gt">></option>
+              <option value="lt"><</option>
+              <option value="eq">=</option>
+            </select>
+            <p>
+              <label>Значение</label>
+              <input type="text" name="req-value-name" placeholder="Значение" required />
+            </p>
+          </div>
+        </div>
+        <button type="button" onclick="addRequirement()">Добавить требование</button>
+      </fieldset>
+    </fieldset>
+
+    <br />
+    <button type="submit">Отправить</button>
+    <button type="reset">Очистить</button>
+  </form>
+
+  <script src="{% static 'js/add_selector.js' %}"></script>
+  <script src="{% static 'js/add_requirement.js' %}"></script>
+{% endblock %}
