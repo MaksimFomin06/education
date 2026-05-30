@@ -1,0 +1,52 @@
+Минипроверка:
+1) Множество хранит уникальные элементы одного типа данных
+2) Обычно его используют для выявления повторяющихся элементов
+3) Словарь хранит данные в формате ключ: значение
+4) Проверяет есть ли элемент в словаре и как я понял задает начальное значение
+5) Поиск по множеству работает за O(1), а по списку за O(n)
+6) O(n)
+DZ
+1)
+n = int(input())
+lst = list(map(int, input().split()))
+set_lst = set()
+ans = "NO"
+for elem in lst:
+    if elem in set_lst:
+        ans = "YES"
+        break
+    set_lst.add(elem)
+print(ans)
+2)
+n = int(input())
+lst = list(map(int, input().split()))
+set_lst = set(lst)
+print(len(set_lst))
+3)
+dct = {}
+word = input()
+for sym in word:
+    dct[sym] = dct.get(sym, 0) + 1
+print(dct)
+4)
+dct = {}
+word = input()
+for sym in word:
+    dct[sym] = dct.get(sym, 0) + 1
+ans = "NO"
+for ind, val in dct.items():
+    if val == 1:
+        ans = ind
+        break
+print(ans)
+5)
+n = int(input())
+n_mas = list(map(int, input().split()))
+m = int(input())
+ans = set()
+m_mas = set(list(map(int, input().split())))
+for i in n_mas:
+    if i in m_mas:
+        ans.add(i)
+
+print(*ans)

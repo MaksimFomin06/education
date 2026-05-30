@@ -1,0 +1,48 @@
+Минипроверка:
+1) p
+2) последняя буква строки
+3) bcd
+4) нет
+5) соединяет строки в список строк
+6) соединяет строки в одну строку
+ДЗ:
+1) 
+s = input()
+count = 0
+for elem in s:
+    if elem == "a":
+        count += 1
+print(count)
+Скорость: O(n)
+Память: O(1)
+2) 
+s = input()
+new_s = ""
+for elem in s:
+    if elem != " ":
+        new_s += elem
+print(new_s)
+3)
+s = input()
+is_pal = True
+for i in range(len(s) // 2):
+    if s[i] != s[len(s) - 1 - i]:
+        is_pal = False
+        break
+if is_pal:
+    print("YES")
+else:
+    print("NO")
+4)
+max_len = 0
+max_word = ""
+words = list(map(str, input().split()))
+for word in words:
+    now_len = len(word)
+    if now_len > max_len:
+        max_len = now_len
+        max_word = word
+print(max_word)
+5)
+words = list(map(str, input().split()))
+print(*words[::-1])
