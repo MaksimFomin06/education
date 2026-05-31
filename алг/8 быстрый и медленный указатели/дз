@@ -1,0 +1,92 @@
+Минипроверка:
+1) Быстрый указатель проходится по элементам
+2) Медленный указатель пишет элементы по нужным индексам
+3) Потому что в конце массива остается мусор
+4) Когда выполнено условие для элемента
+5) O(n)
+6) O(1)
+
+ДЗ:
+1) 
+n = int(input())
+nums = list(map(int, input().split()))
+
+fast = 0
+slow = 0
+
+for i in range(n):
+    elem = nums[i]
+
+    if elem != 0:
+        nums[slow] = elem
+        slow += 1
+    
+    fast += 1
+
+print(*nums[:slow])
+2) 
+n = int(input())
+nums = list(map(int, input().split()))
+
+fast = 0
+slow = 0
+
+for i in range(n):
+    elem = nums[i]
+
+    if elem > 0:
+        nums[slow] = elem
+        slow += 1
+    
+    fast += 1
+
+print(*nums[:slow])
+3)
+n = int(input())
+lst = list(map(int, input().split()))
+x = int(input())
+
+slow = 0
+fast = 0
+
+for i in range(n):
+    elem = lst[i]
+
+    if elem != x:
+        lst[slow] = elem
+        slow += 1
+    fast += 1
+
+print(*lst[:slow])
+4)
+n = int(input())
+nums = list(map(int, input().split()))
+
+slow = 1
+fast = 1
+
+for i in range(1, n):
+    elem = nums[fast]
+
+    if elem != nums[slow - 1]:
+        nums[slow] = elem
+        slow += 1
+    fast += 1
+
+print(*nums[:slow])
+5) 
+n = int(input())
+nums = list(map(int, input().split()))
+
+chet = []
+nechet = []
+
+for i in range(n):
+    elem = nums[i]
+    if elem % 2 == 0:
+        chet.append(elem)
+    else:
+        nechet.append(elem)
+
+ans = chet+nechet
+print(*ans)

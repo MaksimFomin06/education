@@ -1,0 +1,79 @@
+Минипроверка:
+1) Это две точки на отрезке которые двигаются навстречу друг другу
+2) Так не будет смысла двигать указатели, будет хаотичная сумма, никакой логики в этом нет
+3) двигаем левую сторону вправо
+4) двигаем правую сторону влево
+5) Случайно можем переиспользовать один элемент два раза
+6) O(n)
+DZ
+1) 
+s = input()
+left = 0
+right = len(s) - 1
+ans = "YES"
+while left < right:
+    if s[left] != s[right]:
+        ans = "NO"
+        break
+    left += 1
+    right -= 1
+print(ans)
+2) 
+n = int(input())
+nums = list(map(int, input().split()))
+left = 0
+right = len(nums) - 1
+
+while left < right:
+    nums[left], nums[right] = nums[right], nums[left]
+    left += 1
+    right -= 1
+print(*nums)
+3) 
+n = int(input())
+nums = list(map(int, input().split()))
+target = int(input())
+
+left = 0
+right = len(nums) - 1
+
+ans = "NO"
+
+while left < right:
+    summ = nums[left] + nums[right]
+    if summ == target:
+        ans = "YES"
+        break
+    elif summ < target:
+        left += 1
+    elif summ > target:
+        right -= 1
+print(ans)
+4)
+n = int(input())
+lst = list(map(int, input().split()))
+target = int(input())
+
+left = 0
+right = len(lst) - 1
+
+count = 0
+
+while left < right:
+    summ = lst[left] + lst[right]
+    if summ == target:
+        count += 1
+        left += 1
+        right -= 1
+    elif summ < target:
+        left += 1
+    elif summ > target:
+        right -= 1
+
+print(count)
+5)
+n = int(input())
+nums = list(map(int, input().split()))
+new_lst = [i for i in nums if i != 0]
+
+print(*new_lst)
