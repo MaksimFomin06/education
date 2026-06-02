@@ -1,0 +1,157 @@
+Минипроверка
+1) Это отрезок который меняется при проходе по циклу, убирается левый элемент и добавляется правый, работает по памяти за O(n)
+2) Например когда нужно найти максимальную сумму чисел идущих подряд (фиксированной длины) или когда нужно проверить какое-то условие, найти сумму чисел больше чем таргет итд
+3) убирается левый элемент и добавляется правый
+4) Так как окно двигается на месте, за одну проходку
+5) O(n)
+6) Отрицательные числа будут ломать логику
+ДЗ
+1) 
+n = int(input())
+arr = list(map(int, input().split()))
+k = int(input())
+
+window_summ = 0
+
+for i in range(k):
+    window_summ += arr[i]
+
+ans = window_summ
+
+for right in range(k, n):
+    window_summ += arr[right]
+    window_summ -= arr[right - k]
+
+    if window_summ > ans:
+        ans = window_summ
+
+print(ans)
+2)
+n = int(input())
+arr = list(map(int, input().split()))
+k = int(input())
+x = int(input())
+
+count = 0
+window_summ = 0
+
+for i in range(k):
+    window_summ += arr[i]
+
+if window_summ > x:
+    count += 1
+
+for right in range(k, n):
+    window_summ += arr[right]
+    window_summ -= arr[right - k]
+
+    if window_summ > x:
+        count += 1
+
+print(count)
+3)
+n = int(input())
+arr = list(map(int, input().split()))
+k = int(input())
+
+curr_count = 0
+
+for i in range(k):
+    if arr[i] % 2 == 0:
+        curr_count += 1
+
+max_count = curr_count
+
+for ind in range(k, n):
+    delet = arr[ind-k]
+    dob = arr[ind]
+
+    if delet % 2 == 0:
+        curr_count -= 1
+    if dob % 2 == 0:
+        curr_count += 1
+
+    if curr_count > max_count:
+        max_count = curr_count
+
+print(max_count)
+4)
+n = int(input())
+arr = list(map(int, input().split()))
+target = int(input())
+
+min_len = n + 1
+left = 0
+summ = 0
+
+for right in range(n):
+    summ += arr[right]
+
+    while summ >= target:
+        curr_len = right - left + 1
+        min_len = min(curr_len, min_len)
+
+        summ -= arr[left]
+        left += 1
+
+if min_len == n + 1:
+    print(-1)
+else:
+    print(min_len)
+5)
+s = input()
+
+left = 0
+max_len = 0
+chars = set()
+
+for right in range(len(s)):
+    while s[right] in chars:
+        chars.remove(s[left])
+        left += 1
+    
+    chars.add(s[right])
+    max_len = max(max_len, right - left + 1)
+
+print(max_len)
+
+Дополнительное задание
+Минизадача А
+n = int(input())
+arr = list(map(int, input().split()))
+target = int(input())
+
+ans = "NO"
+left = 0
+summ = 0
+
+for right in range(n):
+    summ += arr[right]
+
+    while summ > target:
+        summ -= arr[left]
+        left += 1
+
+    if summ == target:
+        ans = "YES"
+        break
+
+print(ans)
+Минизадача Б
+s = input()
+window = 3
+ans = "NO"
+curr = ""
+left = 0
+
+for right in range(window, len(s) + 1):
+    curr = s[left:right]
+    print(curr)
+    
+    if len(curr) == len(set(curr)):
+        ans = "YES"
+        break
+
+    left += 1
+
+print(ans)

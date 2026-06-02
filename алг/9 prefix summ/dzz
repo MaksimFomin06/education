@@ -1,0 +1,69 @@
+Минипроверка:
+1) Он хранит сумму элементов до i не включительно
+2) так удобнее
+3) r + 1 - l
+4) O(n)
+5) O(1)
+6) Так как просмотр будет за O(1) вместо O(n) проходки по массиву
+ДЗ:
+1) 
+n = int(input())
+arr = list(map(int, input().split()))
+prefix = [0] * (n + 1)
+
+for i in range(n):
+    prefix[i + 1] = prefix[i] + arr[i]
+
+print(*prefix)
+2)
+n = int(input())
+arr = list(map(int, input().split()))
+l, r = map(int, input().split())
+prefix = [0] * (n + 1)
+
+for i in range(n):
+    prefix[i + 1] = prefix[i] + arr[i]
+
+ans = prefix[r + 1] - prefix[l]
+print(ans)
+3) 
+n = int(input())
+arr = list(map(int, input().split()))
+q = int(input())
+
+prefix = [0] * (n + 1)
+for i in range(n):
+    prefix[i + 1] = prefix[i] + arr[i]
+
+for i in range(q):
+    l, r = map(int, input().split())
+    print(prefix[r + 1] - prefix[l])
+4)
+n = int(input())
+arr = list(map(int, input().split()))
+q = int(input())
+
+prefix = [0] * (n + 1)
+
+for i in range(n):
+    prefix[i + 1] = prefix[i] + 1 if arr[i] > 0 else prefix[i]
+
+for i in range(q):
+    l, r = map(int, input().split())
+    print(prefix[r + 1] - prefix[l])
+5) 
+ans = -1
+n = int(input())
+arr = list(map(int, input().split()))
+prefix = [0] * (n + 1)
+
+for i in range(n):
+    prefix[i + 1] = prefix[i] + arr[i]
+
+for i in range(n):
+    left = prefix[i]
+    right = prefix[n] - prefix[i + 1]
+    if left == right:
+        ans = i
+        break
+print(ans)
