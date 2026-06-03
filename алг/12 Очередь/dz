@@ -1,0 +1,66 @@
+Минипроверка:
+1) Отличие в том что стек работает с последним элементом списка, а очередь с первым. Также в очереди используется тип данных deque из библиотеки collections
+2) Первый пришел - первый ушел
+3) В deque удаление левого элемента работает за O(1), а в списке за O(n) что очень долго за больших данных
+4) добавляет элемент в конец списка
+5) Удаляет левый элемент из списка
+6) O(1)
+DZ
+1)
+from collections import deque
+
+n = int(input())
+deq = deque()
+
+for i in range(n):
+    command = input().split()
+
+    if command[0] == "push":
+        num = int(command[1])
+
+        deq.append(num)
+    else:
+        if deq:
+            print(deq.popleft())
+        else:
+            print("EMPTY")
+2)
+from collections import deque
+
+
+n = int(input())
+deq = deque()
+
+for i in range(n):
+    command = input().split()
+
+    if command[0] == "push":
+        num = int(command[1])
+
+        deq.append(num)
+    elif command[0] == "pop":
+        if deq:
+            deq.popleft()
+    elif command[0] == "size":
+        print(len(deq))
+3)
+from collections import deque
+
+
+n = int(input())
+names = deque()
+
+for i in range(n):
+    name = input()
+    names.append(name)
+
+k = int(input())
+
+if len(names) < k:
+    print(*names)
+else:
+    ans = []
+    for i in range(k):
+        ans.append(names.popleft())
+    
+    print(*ans)
