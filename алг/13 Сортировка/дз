@@ -1,0 +1,43 @@
+"""Минипроверка:
+1) sort делает сортировку на месте. sorted создает новый экземпляр. Разное использование памяти
+2) sort(reverse=True) (reverse=True)
+3) O(n log n)
+4) Сортирует по ключу len. len - длина - сортировка по длине
+5) Сортировка по второму элементу списку (индекс 1)
+6) Бывают случаи когда можно решить задачу без сортировки за линейную сложность и не прибегать к сортировке, которая работает медленнее
+"""
+# ДЗ
+# 1
+n = int(input())
+arr = list(map(int, input().split()))
+arr.sort()
+print(*arr)
+# 2
+n = int(input())
+arr = list(map(int, input().split()))
+arr.sort(reverse=True)
+print(*arr)
+# 3
+s = list(input().split())
+s.sort(key=len)
+print(s[0])
+# 4
+n = int(input())
+arr = list(map(int, input().split()))
+un = list(set(arr))
+un.sort()
+
+if len(un) < 2:
+    print(-1)
+else:
+    print(un[-2])
+# 5
+s1 = list(input())
+s2 = list(input())
+s1.sort()
+s2.sort()
+
+if s1 == s2:
+    print("YES")
+else:
+    print("NO")
