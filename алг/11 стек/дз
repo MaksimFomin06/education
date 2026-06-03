@@ -1,0 +1,46 @@
+Минипроверка
+1) Список элементов по принципу: последний пришел - первый ушел
+2) Добавляет элемент в конец списка
+3) Удаляет элемент по индексу из списка
+4) Обратиться к последнему из списка элементу
+5) Если осталась какая-то скобка, значит у нее нет пары, соответственно ответ NO
+ДЗ
+1)
+n = int(input())
+stack = list(map(int, input().split()))
+result = []
+
+while stack:
+    result.append(stack.pop())
+
+print(*result)
+У меня вопрос конкретно по этой задаче: Зачем так сложно? Можно ведь просто сделать arr[::-1]
+2)
+string = input()
+stack = []
+ans = "YES"
+
+for i in string:
+    if i == "(":
+        stack.append(i)
+    else:
+        if not stack:
+            ans = "NO"
+            break
+        stack.pop()
+
+if stack:
+    ans = "NO"
+
+print(ans)
+3)
+s = input()
+stack = []
+
+for i in s:
+    if stack and stack[-1] == i:
+        stack.pop(-1)
+    else:
+        stack.append(i)
+
+print("".join(stack))

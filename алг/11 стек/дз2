@@ -1,0 +1,65 @@
+Минипроверка:
+1) В стек кладем открывающие скобки
+2) [
+3) Потому что несоблюден порядок скобок
+4) Так как у всех скобок должны быть открывающие и закрывающие скобки
+5) Для связывания пар скобок
+ДЗ
+1)
+s = input()
+ans = "YES"
+
+pairs = {
+    ")": "(",
+    "]": "[",
+    "}": "{",
+}
+
+stack = []
+
+for i in s:
+    if i in "([{":
+        stack.append(i)
+    else:
+        if not stack or (stack and stack[-1] != pairs[i]):
+            ans = "NO"
+            break
+    
+        stack.pop()
+
+if stack:
+    ans = "NO"
+
+print(ans)
+2)
+s = input()
+
+stack = []
+
+for i in s:
+    if i == "*":
+        if stack:
+            stack.pop()
+    else:
+        stack.append(i)
+
+print("".join(stack))
+3)
+s = input()
+
+stack = []
+count = 0
+
+for i in s:
+    if i == "(":
+        stack.append(i)
+    else:
+        if stack and stack[-1] == "(":
+            stack.pop()
+        else:
+            count += 1
+
+if stack:
+    count += len(stack)
+
+print(count)
