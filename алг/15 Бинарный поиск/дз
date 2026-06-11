@@ -1,0 +1,98 @@
+Минипроверка:
+1) Когда нужно найти какой-то элемент в отсортированном массиве
+2) O(log n)
+3) центр (left + right) // 2
+4) left = mid + 1
+5) right = mid - 1
+6) Потому что mid уже проверен
+ДЗ
+1)
+n = int(input())
+arr = list(map(int, input().split()))
+target = int(input())
+ans = "NO"
+
+left = 0
+right = n - 1
+
+while left <= right:
+    mid = (left + right) // 2
+    
+    if arr[mid] == target:
+        ans = "YES"
+        break
+    elif arr[mid] < target:
+        left = mid + 1
+    elif arr[mid] > target:
+        right = mid - 1
+
+print(ans)
+2)
+n = int(input())
+arr = list(map(int, input().split()))
+target = int(input())
+
+ind = -1
+
+left = 0
+right = n - 1
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if arr[mid] == target:
+        ind = mid
+        break
+    elif arr[mid] < target:
+        left = mid + 1
+    else:
+        right = mid - 1
+
+print(ind)
+3) 
+def bin_search(n, arr, target):
+    left = 0
+    right = n - 1
+    ans = "NO"
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if arr[mid] == target:
+            ans = "YES"
+            break
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return ans
+
+
+n = int(input())
+arr = list(map(int, input().split()))
+q = int(input())
+
+for i in range(q):
+    target = int(input())
+
+    print(bin_search(n, arr, target))
+4) 
+n = int(input())
+arr = list(map(int, input().split()))
+target = int(input())
+
+ans = -1
+left = 0
+right = n - 1
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if arr[mid] >= target:
+        ans = mid
+        right = mid - 1
+    else:
+        left = mid + 1
+
+print(ans)
