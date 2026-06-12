@@ -1,0 +1,79 @@
+Минипроверка:
+1) Ищет ответ по условию
+2) bool - True False
+3) Пробуем найти еще меньше
+4) boolean и монотонность
+ДЗ:
+1)
+# Задача найти x который в квадрате >= n
+# Буду использовать бинарный поиск с условием
+# Скорость O(log n)
+
+n = int(input())
+left = 0
+right = n
+ans = n
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if mid * mid >= n:
+        ans = mid
+        right = mid -1
+    else:
+        left = mid + 1
+
+print(ans)
+
+# Решил задачу за 3:30
+2)
+# Нужно найти время печати всех страниц
+# Скорость принтера 1 страница за t секунд
+# Нужно n страниц
+# то есть скорость = t * n
+
+n = int(input())
+t = int(input())
+
+left = 0
+right = t * n
+
+
+def can(time):
+    if time // t >= n:
+        return True
+    else:
+        return False
+
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if can(mid):
+        ans = mid
+        right = mid - 1
+    else:
+        left = mid + 1
+
+print(ans)
+
+# Решил за 8;35
+3)
+n = int(input())
+x, y = map(int, input().split())
+
+left = 0
+right = n * x * y
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if mid // x + mid // y >= n:
+        ans = mid
+        right = mid - 1
+    else:
+        left = mid + 1
+
+print(ans)
+
+#Решил за 5:45
