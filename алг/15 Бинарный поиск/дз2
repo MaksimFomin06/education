@@ -1,0 +1,124 @@
+Минипроверка:
+1) Он ищет первый элемент >= target
+2) Ищет первый элемент > target
+3) Слева lower bound а справа upper bound
+4) Потому что может быть несколько одинаковых элементов
+5) Из upper bound вычесть lower bound
+ДЗ
+1)
+# Буду использовать алгоритм бинарного поиска + upper_bound
+# Скорость будет O(log n)
+
+n = int(input())
+arr = list(map(int, input().split()))
+target = int(input())
+
+ans = -1
+
+left = 0
+right = n - 1
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if arr[mid] > target:
+        ans = mid
+        right = mid - 1
+    else:
+        left = mid + 1
+
+print(ans)
+
+# Решил задачу за 6 минут
+2)
+# Решать буду через бинарный поиск + lower bound
+# Скорость O(log n)
+
+n = int(input())
+arr = list(map(int, input().split()))
+target = int(input())
+
+ans = -1
+left = 0
+right = n - 1
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if arr[mid] >= target:
+        ans = mid
+        right = mid - 1
+    else:
+        left = mid + 1
+
+print(ans)
+
+# Решил задачу за 3:48
+3) 
+# Мне нужно найти количество target в массиве
+# Использовать буду алгоритм бинарного поиска 
+# Для начала найду upper lower bound затем вычту lower из upper и получу ответ
+# Время будет O(log n)
+
+n = int(input())
+arr = list(map(int, input().split()))
+target = int(input())
+
+left = 0
+lower, upper = n, n
+right = n - 1
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if arr[mid] > target:
+        upper = mid
+        right = mid - 1    
+    else:
+        left = mid + 1
+
+left = 0
+right = n - 1
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if arr[mid] >= target:
+        lower = mid
+        right = mid - 1
+    else:
+        left = mid + 1
+
+if lower == n or arr[lower] != target:
+    print(0)
+else:
+    print(upper - lower)
+
+# Важно: Тут не обработан случай когда все элементы массива одинаковые и target равен этим элементам, можно будет добавить проверку if arr[0] == arr[-1]
+# Решил задачу за 12 минут 30 секунд
+4) 
+# Мне нужно найти самый крайний элемент который не больше target
+# Буду использовать бинарный поиск lower_bound
+# Время будет O(log n)
+
+n = int(input())
+arr = list(map(int, input().split()))
+target = int(input())
+
+ans = -1
+left = 0
+right = n -1
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if arr[mid] <= target:
+        ans = mid
+        left = mid + 1
+    else:
+        right = mid - 1
+
+print(ans)
+
+# Тут также не предусмотрен случай когда все элементы массива одинаковы, проверка будет та же, так как у нас формат дз я пока не уточняю такие моменты но держу в голову такие краевые ситуации
+# Решил задачу за 5:35
